@@ -7,7 +7,7 @@ async function main() {
 
   const fakeUsers = Array.from({ length: usersToCreate }, (_, index) => ({
     name: `User ${index + 1}`,
-    email: `User ${index + 1} '@example.com`,
+    email: `User${index + 1}@example.com`,
   }));
 
   try {

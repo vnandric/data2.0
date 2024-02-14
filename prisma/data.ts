@@ -1,12 +1,17 @@
 import { PrismaClient } from '@prisma/client';
-import { unstable_noStore as noStore } from 'next/cache';
+// import { unstable_noStore as noStore } from 'next/cache';
 
 const prisma = new PrismaClient();
 
 export async function getUsers1() {
-    noStore();
+    // noStore();
     try {
         const users = await prisma.user.findMany({
+            select: {
+                id: true,
+                name: true,
+                email: true,
+            },
             take: 10,
           });
           return users;
@@ -18,17 +23,26 @@ export async function getUsers1() {
 }
 
 export async function getUsers2() {
-    noStore();
+    // noStore();
     const users = await prisma.user.findMany({
+        select: {
+            id: true,
+            name: true,
+            email: true,
+        },
       take: 100,
     });
     return users;
 }
 
 export async function getUsers3() {
-    noStore();
+    // noStore();
     const users = await prisma.user.findMany({
-      take: 300,
+        select: {
+            id: true,
+            name: true,
+            email: true,
+        },
     });
     return users;
 }  
