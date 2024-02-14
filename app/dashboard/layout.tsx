@@ -1,14 +1,15 @@
-import Nav from '@/app/ui/dashboard/nav/nav';
+import Nav from "@/app/ui/dashboard/nav/nav";
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <Nav />
 
-    return (
-        <>
-            <Nav />
-
-            <div>
-                {children}
-            </div>            
-        </>
-    );
-} 
+      <div>{children}</div>
+    </>
+  );
+}

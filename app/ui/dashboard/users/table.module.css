@@ -1,23 +1,23 @@
 .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100vw;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 20px;
 }
 
 .main table {
-    border: 2px solid #171717;
-    width: 25%;
+  border: 2px solid #171717;
+  width: 25%;
 }
 
 .main table th {
-    background-color: #171717;
-    color: white;
-    padding: 10px;
+  background-color: #171717;
+  color: white;
+  padding: 10px;
 }
 
 .main table td {
-    text-align: center;
+  text-align: center;
 }

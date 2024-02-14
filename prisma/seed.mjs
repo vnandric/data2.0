@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -16,9 +16,9 @@ async function main() {
         data: user,
       });
     }
-    console.log('Fake users seeded successfully!');
+    console.log("Fake users seeded successfully!");
   } catch (error) {
-    console.error('Error seeding fake users:', error);
+    console.error("Error seeding fake users:", error);
   } finally {
     await prisma.$disconnect();
   }
