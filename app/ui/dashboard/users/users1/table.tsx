@@ -19,9 +19,9 @@ export default async function UsersTable() {
           <tbody>
             {users.map((user) => (
               <tr key={user.id}>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
+                <td className="text-white">{user.id}</td>
+                <td className="text-white">{user.name}</td>
+                <td className="text-white">{user.email}</td>
               </tr>
             ))}
           </tbody>
