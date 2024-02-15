@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 // import { unstable_noStore as noStore } from 'next/cache';
 
 const prisma = new PrismaClient();
@@ -11,6 +12,9 @@ export async function getUsers1() {
         id: true,
         name: true,
         email: true,
+      },
+      orderBy: {
+        id: "desc",
       },
       take: 10,
     });

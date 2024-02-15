@@ -1,5 +1,5 @@
 import Style from "../table.module.css";
-import { getUsers2 } from "@/prisma/data";
+import { getUsers2 } from "@/app/api/data";
 
 export default async function UsersTable() {
   const users = await getUsers2();

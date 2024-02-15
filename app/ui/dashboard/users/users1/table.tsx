@@ -1,5 +1,6 @@
 import Style from "../table.module.css";
-import { getUsers1 } from "@/prisma/data";
+import { getUsers1 } from "@/app/api/data";
+import CreateUser from "../create/create";
 
 export default async function UsersTable() {
   const users = await getUsers1();
@@ -8,6 +9,7 @@ export default async function UsersTable() {
     <>
       <div className={Style.main}>
         <h1>Users</h1>
+        <CreateUser />
         <table>
           <thead>
             <tr>
