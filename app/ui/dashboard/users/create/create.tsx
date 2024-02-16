@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import Submit from "./submit";
+import InputComponent from "./input";
 
 const prisma = new PrismaClient();
 
@@ -22,8 +23,7 @@ export default function CreateUser() {
     <div>
       <h2>Create New User</h2>
       <form action={addUser}>
-        <input type="text" name="name" placeholder="name" />
-        <input type="text" name="email" placeholder="Content" />
+        <InputComponent />
         <Submit />
       </form>
     </div>
