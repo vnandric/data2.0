@@ -21,7 +21,7 @@ export default function CreateUser() {
 
   return (
     <div>
-      <h2>Create New User</h2>
+      <h2 className="text-white">Create New User</h2>
       <form action={addUser}>
         <InputComponent />
         <Submit />

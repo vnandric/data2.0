@@ -8,7 +8,7 @@ export default async function UsersTable() {
   return (
     <>
       <div className={Style.main}>
-        <h1>Users</h1>
+        <h1 className="text-white">Users</h1>
         <CreateUser />
         <table>
           <thead>
@@ -21,9 +21,9 @@ export default async function UsersTable() {
           <tbody>
             {users.map((user) => (
               <tr key={user.id}>
-                <td className="text-white">{user.id}</td>
-                <td className="text-white">{user.name}</td>
-                <td className="text-white">{user.email}</td>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
               </tr>
             ))}
           </tbody>
