@@ -1,4 +1,4 @@
-import Style from "../table.module.css";
+import Style from "../users.module.css";
 import { getUsers2 } from "@/app/api/data";
 
 export default async function UsersTable() {

@@ -1,6 +1,5 @@
-import Style from "../table.module.css";
+import Style from "../users.module.css";
 import { getUsers1 } from "@/app/api/data";
-import CreateUser from "../create/create";
 import DeleteUser from "../delete/delete";
 
 export default async function UsersTable() {
@@ -9,8 +8,6 @@ export default async function UsersTable() {
   return (
     <>
       <div className={Style.main}>
-        <h1 className="text-white">Users</h1>
-        <CreateUser />
         <table>
           <thead>
             <tr>

@@ -3,6 +3,8 @@ import { revalidatePath } from "next/cache";
 import Submit from "./submit";
 import InputComponent from "./input";
 
+import styles from "../users.module.css";
+
 const prisma = new PrismaClient();
 
 export default function CreateUser() {
@@ -20,12 +22,14 @@ export default function CreateUser() {
   };
 
   return (
-    <div>
-      <h2 className="text-white">Create New User</h2>
-      <form action={addUser}>
-        <InputComponent />
-        <Submit />
-      </form>
-    </div>
+    <>
+      <div className={styles.main_create}>
+        <h2 className="text-white">Create New User</h2>
+        <form action={addUser}>
+          <InputComponent />
+          <Submit />
+        </form>
+      </div>
+    </>
   );
 }

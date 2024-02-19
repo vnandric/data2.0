@@ -7,14 +7,20 @@ export default function InputComponent() {
     <>
       <Grid container spacing={2}>
         <Grid item>
-          <Box sx={{ bgcolor: "white" }}>
-            <Input type="text" name="name" placeholder="name" />
-          </Box>
+          <Input
+            type="text"
+            sx={{ bgcolor: "white" }}
+            name="name"
+            placeholder="name"
+          />
         </Grid>
         <Grid item>
-          <Box sx={{ bgcolor: "white" }}>
-            <Input type="text" name="email" placeholder="Email" />
-          </Box>
+          <Input
+            type="text"
+            sx={{ bgcolor: "white" }}
+            name="email"
+            placeholder="Email"
+          />
         </Grid>
       </Grid>
     </>
