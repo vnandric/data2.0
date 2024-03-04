@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/ui/dashboard/users/users1/table.jsx",
-    "app/dashboard/users/[id]/page.jsx"
+    "app/dashboard/users/[id]/page.jsx",
+    "app/dashboard/api/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

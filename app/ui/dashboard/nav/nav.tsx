@@ -18,6 +18,9 @@ export default function Nav() {
           <li className="text-white">
             <Link href="/dashboard/users3">Users3</Link>
           </li>
+          <li className="text-white">
+            <Link href="/dashboard/api">Api</Link>
+          </li>
         </ul>
       </nav>
     </>
