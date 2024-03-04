@@ -10,13 +10,13 @@ export default function Nav() {
             <Link href="/dashboard">Home</Link>
           </li>
           <li className="text-white">
-            <Link href="/dashboard/users1">Users1</Link>
+            <Link href="/dashboard/users/1">Users1</Link>
           </li>
           <li className="text-white">
-            <Link href="/dashboard/users2">Users2</Link>
+            <Link href="/dashboard/users/2">Users2</Link>
           </li>
           <li className="text-white">
-            <Link href="/dashboard/users3">Users3</Link>
+            <Link href="/dashboard/users/3">Users3</Link>
           </li>
           <li className="text-white">
             <Link href="/dashboard/api">Api</Link>

@@ -1,33 +1,33 @@
-import Users1Table from "@/app/ui/dashboard/users/users1/table";
+import UsersTable from "@/app/ui/dashboard/users/table";
 import { Suspense } from "react";
 import CreateUser from "@/app/ui/dashboard/users/create/create";
-import { getUsers1 } from "@/app/api/data";
+import { getUsers1, getUsers2, getUsers3 } from "@/app/api/data";
 
 export function generateStaticParams() {
   return [{ id: "1" }, { id: "2" }, { id: "3" }];
 }
 
-export function Table({ users }) {
-  return (
-    <div>
-      <Users1Table users={users} />
-    </div>
-  );
+export async function Table({ id }) {
+  if (id === "1") {
+    const users = await getUsers1();
+    return <UsersTable users={users} />;
+  } else if (id === "2") {
+    const users = await getUsers2();
+    return <UsersTable users={users} />;
+  } else if (id === "3") {
+    const users = await getUsers3();
+    return <UsersTable users={users} />;
+  }
 }
 
 export default async function Users1({ params }) {
   const { id } = params;
 
-  if (is === "1") {
-    const users = await getUsers1();
-    return <Users1 users={users} />;
-  }
-
   return (
     <>
       <CreateUser />
       <Suspense>
-        <Table users={users} />
+        <Table id={id} />
       </Suspense>
     </>
   );
