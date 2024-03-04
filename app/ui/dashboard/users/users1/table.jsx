@@ -1,10 +1,7 @@
 import Style from "../users.module.css";
-import { getUsers1 } from "@/app/api/data";
 import DeleteUser from "../delete/delete";
 
-export default async function UsersTable() {
-  const users = await getUsers1();
-
+export default async function UsersTable({ users }) {
   return (
     <>
       <div className={Style.main}>
