@@ -1,7 +1,5 @@
 async function getData() {
-  const comments = await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=rotterdam&appid=166d09df8dc6a230d98f71e46472077c"
-  );
+  const comments = await fetch(process.env.OPENWEATHER_URL);
   return comments.json();
 }
 
