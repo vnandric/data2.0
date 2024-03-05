@@ -49,3 +49,15 @@ export async function getUsers3() {
   });
   return users;
 }
+
+export async function getWeather() {
+  const weather = await fetch(`${process.env.OPENWEATHER_URL}`, {
+    cache: "no-store",
+  });
+
+  if (!weather.ok) {
+    throw new Error("Failed to fetch weather data");
+  }
+
+  return weather.json();
+}
