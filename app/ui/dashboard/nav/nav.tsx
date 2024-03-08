@@ -21,6 +21,9 @@ export default function Nav() {
           <li className="text-white">
             <Link href="/dashboard/api">Api</Link>
           </li>
+          <li className="text-white">
+            <Link href="/dashboard/lastpass">Lastpass</Link>
+          </li>
         </ul>
       </nav>
     </>

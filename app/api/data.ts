@@ -63,3 +63,15 @@ export async function getWeather() {
 
   return weather.json();
 }
+
+export async function getLastpass() {
+  const lastpass = await fetch(`${process.env.LOCALHOST8080}/lastpass`, {
+    cache: "no-store",
+  });
+
+  if (!lastpass.ok) {
+    throw new Error("Failed to fetch lastpass data");
+  }
+
+  return lastpass.json();
+}
